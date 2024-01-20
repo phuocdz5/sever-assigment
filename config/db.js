@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Sử dụng biến môi trường để đọc đường dẫn kết nối MongoDB
-const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://admin:phuocdaica624@cluster0.on1mfeq.mongodb.net/AssigmentReactNative1';
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://admin:phuocdaica624@cluster0.on1mfeq.mongodb.net/AssigmentReactNative';
 
 mongoose.connect(mongoURI, {
   useNewUrlParser: true,
