@@ -1,0 +1,13 @@
+{
+    "name": "assigment-react-native",
+    "version": "1.0.0",
+    "description": "Your Node.js app",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.1.0"
+  }
+}
