@@ -3,10 +3,10 @@ const Schema = mongoose.Schema;
 
 
 const userSchema = Schema({
+    fullname:String,
     username: String,
     password: String,
-    email: String,
-    phone: Number,
+    
 })
 
 const UserModel = mongoose.model('user', userSchema);
