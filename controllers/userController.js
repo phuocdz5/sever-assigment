@@ -19,7 +19,7 @@ const UserController ={
             if(user) {
                 res.status(201).json({message : 'success'});
             } else {
-                res.status(400).json({message : 'error'});
+                res.status(400).json({message : 'error'+username});
             }
         } catch (error) {
             res.status(401).json({error : error.message});
