@@ -5,7 +5,7 @@ const userRoutes = require('./routes/userRoutes'); //Import file routes
 
 
 const app = express();
-const POST = 3000;
+const POST = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 //thêm đường dẫn routes
