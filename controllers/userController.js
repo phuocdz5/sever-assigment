@@ -7,7 +7,7 @@ const UserController ={
             const {fullname,email, password,phone} = req.body ;
             const user = new UserModel({fullname,email, password,phone});
             await user.save();
-            res.status(200).json({message : 'success'});
+            res.status(200).json({message : 'success'+fullname});
         } catch (error) {
             res.status(500).json({error : error.message});
         }
