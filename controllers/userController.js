@@ -4,8 +4,8 @@ const UserModel = require('../models/userModel');
 const UserController ={
     RegisterUser: async (req,res)=>{
         try {
-            const {fullname,username, password} = req.body ;
-            const user = new UserModel({fullname,username, password});
+            const {fullname,email, password,phone} = req.body ;
+            const user = new UserModel({fullname,email, password,phone});
             await user.save();
             res.status(200).json({message : 'success'});
         } catch (error) {
@@ -14,8 +14,8 @@ const UserController ={
     },
     LoginUser: async(req,res)=>{
         try {
-            const {username, password} = req.body;
-            const user = await UserModel.findOne({username, password});
+            const {email, password} = req.body;
+            const user = await UserModel.findOne({email, password});
             if(user) {
                 res.status(201).json({message : 'success'});
             } else {
